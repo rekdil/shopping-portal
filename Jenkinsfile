@@ -4,27 +4,27 @@ pipeline{
 
 // uncomment the following lines by removing /* and */ to enable
     tools{
-       nodejs ‘nodejs’ 
+       nodejs 'nodejs' 
     }
     
 
     stages{
-        stage(‘Build’){
+        stage('build'){
             steps{
                 echo 'this is the build job'
-                sh ’npm install’
+                sh 'npm install'
             }
         }
-        stage(‘Test’){
+        stage('test'){
             steps{
                 echo 'this is the test job'
-                sh ’npm test’
+                sh 'npm test'
             }
         }
-        stage(‘package’){
+        stage('package'){
             steps{
                 echo 'this is the package job'
-                sh ‘npm run package’
+                sh 'npm run package'
             }
         }
     }
@@ -37,4 +37,3 @@ pipeline{
     }
     
 }
-
